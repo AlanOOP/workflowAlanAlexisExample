@@ -39,7 +39,7 @@ jobs:
           chmod +x .github/workflows/script.sh
           ls -al  
 
-      # - name: Run script
-      #   run: 
-      #     .github/workflows/script.sh
-      #     ls -al 
+      - name: Run script
+        run: 
+          .github/workflows/script.sh
+          ls -al 
