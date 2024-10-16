@@ -23,11 +23,15 @@ jobs:
           ls -al  # Lista nuevamente los archivos para verificar el cambio
 
       - name: Leer Archivo
-        run: cat hola.txt
+        run: |
+          cat hola.txt
+          ls -al
 
   dos:
     runs-on: ubuntu-latest
     needs: uno  # Este job depende de que 'uno' termine primero
     steps:
       - name: Mostrar Contenido del Directorio
+        uses: actions/checkout@v4.2.1
+      - name: Directorio Actual
         run: ls -al
