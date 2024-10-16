@@ -32,14 +32,14 @@ jobs:
     needs: uno  # Este job depende de que 'uno' termine primero
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4.2.1
 
       - name: Set execute permissions for script
         run: |
           chmod +x .github/workflows/script.sh
-          ls -al .github/workflows
+          ls -al  
 
-      - name: Run script
-        run: 
-          .github/workflows/script.sh
-          ls -al .github/workflows
+      # - name: Run script
+      #   run: 
+      #     .github/workflows/script.sh
+      #     ls -al 
